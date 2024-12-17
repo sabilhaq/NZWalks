@@ -29,7 +29,7 @@ namespace NZWalks.API.Controllers
         // GET ALL REGIONS
         // GET: https://localhost:portnumber/api/regions
         [HttpGet]
-        public async Task<IActionResult >GetAll()
+        public async Task<IActionResult> GetAll()
         {
             // Get Data From Database - Domain models 
             var regionsDomain = await regionRepository.GetAllAsync();
@@ -37,7 +37,6 @@ namespace NZWalks.API.Controllers
             // Return DTOs
             return Ok(mapper.Map<List<RegionDto>>(regionsDomain));
         }
-
 
         // GET SINGLE REGION (Get Region By ID)
         // GET: https://localhost:portnumber/api/regions/{id}
